@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package bucles;
+    import javax.swing.JOptionPane; 
+/**
+ *
+ * @author daval
+ */
+public class Bucles {
+
+    private static String resultado;
+
+    /**
+     * @param args the command line arguments
+     */
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        byte pago;
+        short compra;
+        short total;
+        short total_p;
+
+        pago = Byte.parseByte(JOptionPane.showInputDialog
+        ("Digite 1 si paga en efectivo o 2 si paga con tarjeta"));
+        compra = Short.parseShort(JOptionPane.showInputDialog
+        ("Digite de cuanto es la compra realizada"));
+
+        if (pago == 1) {
+            total = (short) (compra * 0.005);
+            total_p = (short) (compra - total);
+            JOptionPane.showInputDialog(null, "El total seria:"
+                    + total_p);
+        } else if (pago == 2) {
+            total = (short) (compra * 0.03);
+            total_p = (short) (compra + total);
+            JOptionPane.showInputDialog(null, "El total seria:"
+                    + total_p);
+        } else;
+            JOptionPane.showInputDialog(null, "Digite una opcion valida");
+       
+    }
+}   
