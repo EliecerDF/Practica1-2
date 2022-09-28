@@ -1,0 +1,39 @@
+package practica2grupo;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author mousl
+ */
+public class Practica2grupo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        byte dado1;
+        byte dado2;
+        byte dado3;
+
+        JOptionPane.showMessageDialog(null, "Bienvenido al Ca"
+                + "sino Lucky Dice");
+        dado1 = Byte.parseByte(JOptionPane.showInputDialog("Digite el"
+                + " resultado del primer dado:"));
+        dado2 = Byte.parseByte(JOptionPane.showInputDialog("Digite el"
+                + " resultado del segundo dado: "));
+        dado3 = Byte.parseByte(JOptionPane.showInputDialog("Digite el"
+                + " resultado del tercer dado: "));
+
+        if (dado1 == 6 && dado2 == 6 && dado3 == 6) {
+            JOptionPane.showMessageDialog(null, "Genial");
+        } else if ((dado1 == 6 && dado2 == 6) || (dado2 == 6 && dado3 == 6) ||
+                (dado3 == 6 && dado1 == 6)) {
+            JOptionPane.showMessageDialog(null, "Muy"
+                    + " Bueno");
+        } else if (dado1 == 6 || dado2 == 6 || dado3 == 6) {
+            JOptionPane.showMessageDialog(null, "Justo");
+        } else if (dado1 != 6 && dado2 != 6 && dado3 != 6) {
+            JOptionPane.showMessageDialog(null, "Miedo");
+                  
+        }
+    }
+}
